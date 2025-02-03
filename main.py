@@ -6,7 +6,7 @@ import autogen
 
 #Defining the OEPN AI Keys
 client = KrutrimCloud()
-llm_config1 = {"model": "Mistral-7B-Instruct","temperature" : 0}
+llm_config1 = {"model": "mistralai/Mistral-7B-v0.2","temperature" : 0}
 #Defining the Firecrawl
 app = FirecrawlApp(api_key = os.getenv("FIRECRAWL_API_KEY"))
 
