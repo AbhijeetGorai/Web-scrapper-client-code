@@ -5,3 +5,4 @@ firecrawl
 openai
 autogen
 pydantic 
+krutrim_cloud
