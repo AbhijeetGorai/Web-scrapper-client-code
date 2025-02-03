@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 from typing import List
 import main  # importing your existing main.py
@@ -58,6 +58,20 @@ async def generate_report(url_input: URLInput):
         logger.error(f"An error occurred: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
+# Add a root endpoint
+@app.get("/")
+async def root():
+    return JSONResponse({
+        "message": "Welcome to Web Scraper API",
+        "endpoints": {
+            "generate_report": "/generate-report/",
+            "documentation": "/docs"
+        },
+        "status": "active"
+    })
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+    # Remove the hardcoded port
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run(app, host="0.0.0.0", port=port) 
