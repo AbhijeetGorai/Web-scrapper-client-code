@@ -6,7 +6,7 @@ import openai
 #Defining the OEPN AI Keys
 api_key = os.getenv("OPENAI_API_KEY")
 
-llm_config1 = {"model":"gpt-4o","api_key":api_key,"temperature":0}
+llm_config1 = {"model":"gpt-4o-mini","api_key":api_key,"temperature":0}
 #Defining the Firecrawl
 app = FirecrawlApp(api_key = os.getenv("FIRECRAWL_API_KEY"))
 
