@@ -6,7 +6,7 @@ import autogen
 
 #Defining the OEPN AI Keys
 api_key = os.getenv("OPENAI_API_KEY")
-llm_config1 = {"model": "gpt-4o","temperature" : 0}
+llm_config1 = {"model": "o1","temperature" : 0}
 
 #Defining the Firecrawl
 app = FirecrawlApp(api_key = os.getenv("FIRECRAWL_API_KEY"))
