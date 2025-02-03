@@ -131,7 +131,7 @@ groupchat = autogen.GroupChat(
 manager = autogen.GroupChatManager(groupchat=groupchat, llm_config=None)
 
 # Start the chat from User Proxy with a query
-user_proxy.initiate_chat(manager, message="https://www.ndtv.com/topic/women-empowerment,https://indianexpress.com/about/women-empowerment")
+#user_proxy.initiate_chat(manager, message="https://www.ndtv.com/topic/women-empowerment,https://indianexpress.com/about/women-empowerment")
 
 
 
