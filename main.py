@@ -7,7 +7,14 @@ import autogen
 client = KrutrimCloud(api_key = os.getenv("KRUTRIM_CLOUD_API_KEY"))
 model_name = "Mistral-7B-v0.2"
 
-llm_config1 = {"model_name":model_name,"temperature":0}
+llm_config1 = {
+    "config_list": [{
+        "model": model_name,
+        "api_key": os.getenv("KRUTRIM_CLOUD_API_KEY"),
+        "temperature": 0
+    }],
+    "cache_seed": 42  # Optional, for reproducibility
+}
 #Defining the Firecrawl
 app = FirecrawlApp(api_key = os.getenv("FIRECRAWL_API_KEY"))
 
