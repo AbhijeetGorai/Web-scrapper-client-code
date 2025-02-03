@@ -1,7 +1,6 @@
 from firecrawl import FirecrawlApp
 from krutrim_cloud import KrutrimCloud
 import os
-import openai
 import autogen
 
 #Defining the OEPN AI Keys
