@@ -6,3 +6,4 @@ openai
 autogen
 pydantic 
 krutrim_cloud
+mistralai
